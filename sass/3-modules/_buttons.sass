@@ -1,0 +1,46 @@
+@use '../1-base/_variables'
+
+button.btn
+    width: 25%
+    height: 40px
+    outline: none
+    border: none
+    cursor: pointer
+    background-color: variables.$primary-color
+    color: variables.$light-color
+    font-weight: 700
+    @media screen and (max-width: 940px)
+        width: 50%
+        max-width: 100px
+    @media screen and (max-width: 320px)
+        max-width: 60px
+        font-size: .6rem
+
+button.btn-product
+    width: 50%
+    height: 40px
+    outline: none
+    border: none
+    cursor: pointer
+    background-color: variables.$primary-color
+    color: variables.$light-color
+    border-radius: 25px
+    font-weight: 700
+    border: 2px solid variables.$primary-color
+    margin-top: 5px
+    transition: .4s
+
+    &:hover
+        background-color: transparent
+        color: variables.$primary-color
+
+button.btn-news
+    width: 25%
+    height: 40px
+    border: none
+    outline: none
+    border-radius: 0 15px 15px 0
+    cursor: pointer
+    background-color: variables.$primary-color
+    color: variables.$light-color
+    font-weight: 700

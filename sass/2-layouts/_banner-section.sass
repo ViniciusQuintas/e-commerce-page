@@ -1,0 +1,21 @@
+@use '../1-base/_variables'
+@use 'layouts-mixins'
+
+section.banner
+    @include layouts-mixins.center-content
+    padding: 2rem 0
+
+    .banner-container
+        @include layouts-mixins.section-container
+
+        .banner-iten
+            @include layouts-mixins.banner-iten
+        
+        #banner1
+            background-image: url(../img/banner1.jpg)
+        #banner2
+            background-image: url(../img/banner2.jpg)
+        #banner3
+            background-image: url(../img/banner3.jpg)
+        
+        

@@ -1,0 +1,62 @@
+@use '../1-base/_variables'
+@use 'layouts-mixins'
+
+section.newsletter
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    padding: 3rem 0
+    border-top: 1px solid variables.$gray-text-color
+    
+
+    h2
+        color: variables.$dark-color
+        text-transform: uppercase
+        font-size: 2.4rem
+        margin-bottom: 25px
+        @media screen and (max-width: 320px)
+            font-size: 1.7rem
+
+    .input-news
+        display: flex
+        text-align: center
+        width: 100%
+        max-width: 500px
+        margin-bottom: 25px
+        
+
+        input
+            padding: 10px 0 10px 15px
+            width: 75%
+            height: 40px
+            border: 1px solid variables.$gray-text-color
+            border-right: none
+            outline: none
+            border-radius: 15px 0 0 15px
+
+    .social-icons
+        margin-top: 25px
+        @media screen and (max-width: 320px)
+            display: flex
+            flex-direction: column
+            
+
+        a
+            padding: 10px 15px
+            border: 1px solid variables.$gray-text-color
+            margin: 0 10px
+            transition: .4s
+            &:hover
+                background-color: variables.$gray-text-color
+                i
+                    color: variables.$primary-color
+            @media screen and (max-width: 320px)
+                margin: 15px 0
+
+            i
+                transition: .4s
+                font-size: 1.1rem
+                color: variables.$dark-color
+

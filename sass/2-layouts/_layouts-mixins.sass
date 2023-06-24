@@ -1,0 +1,189 @@
+@use '../1-base/_variables'
+
+@mixin center-content
+    max-width: variables.$container
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+
+@mixin search-bar
+    width: 40%
+    display: flex
+    @media screen and (max-width: 940px)
+        width: 100%
+        max-width: 400px
+
+    input
+        width: 75%
+        height: 40px
+        outline: none
+        border: none
+        padding-left: 20px
+        border-radius: 15px 0 0 15px
+
+@mixin icon-products
+    position: relative
+    display: flex
+    text-align: center
+
+    .qty
+        position: absolute
+        top: -12px
+        margin-right: 4px
+        display: flex
+        justify-content: center
+        align-items: center
+        align-self: flex-end
+        width: 20px
+        height: 20px
+        background-color: variables.$primary-color
+        border-radius: 50%
+
+    .icon-products-iten
+        display: flex
+        flex-direction: column
+        margin-left: 20px
+
+        i
+            cursor: pointer
+
+        i,span
+            transition: .4s
+            font-size: 1.2rem
+            color: variables.$light-color
+
+@mixin nav-menu
+    width: 100%
+    background-color: variables.$light-color
+    border-top: 3px solid variables.$primary-color
+    border-bottom: 3px solid variables.$section-bg-color
+    padding: 1rem 0
+
+
+@mixin section-container
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    @media screen and (max-width: 760px) 
+        flex-direction: column
+    
+
+@mixin banner-iten
+    width: 30%
+    height: 250px
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    @media screen and (max-width: 760px) 
+        width: 90%
+        max-width: 400px
+        margin: 25px 0
+
+    .banner-content
+        text-align: center
+        width: 70%
+        height: 100%
+        display: flex
+        justify-content: center
+        flex-direction: column
+        background-color: rgba(0, 0, 0, 0.7)
+        border-radius: 0 0 60% 0
+        transition: .6s
+
+        h2
+            padding: 0 15px
+            color: variables.$light-color
+            margin-bottom: 25px
+            font-size: 1.6rem
+
+        a
+            color: variables.$primary-color
+            font-weight: bold
+            font-size: 1.4rem
+
+@mixin products-content
+    width: 100%
+    display: flex
+    justify-content: space-between
+    @media screen and (max-width: 985px) 
+        justify-content: center
+        flex-wrap: wrap
+
+        .product
+            margin: 25px 10px
+
+    .product
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        padding: 30px 20px
+        border: 1px solid variables.$gray-text-color
+        transition: .4s
+        &:hover
+            border-color: variables.$primary-color
+        @media screen and (max-width: 310px) 
+            width: 100%
+
+
+        span
+            align-self: flex-end
+            display: flex
+            color: variables.$light-color
+            background-color: variables.$secondary-color
+            padding: 2px 8px
+            margin-bottom: 15px
+            text-transform: uppercase
+            letter-spacing: 2px
+
+        img
+            width: 200px
+            height: 200px
+            object-fit: contain
+
+        p
+            color: variables.$gray-text-color
+            margin: 10px 0
+            text-transform: uppercase
+
+        h3.name-product
+            color: variables.$dark-color
+            margin: 15px 0
+            text-transform: uppercase
+
+        h3.price
+            color: variables.$primary-color
+            margin-bottom: 15px
+
+        i
+            color: variables.$secondary-color
+            margin-bottom: 15px
+
+@mixin content-footer
+    margin-right: 30px
+
+    h3
+        color: variables.$light-color
+        font-size: 1.7rem
+        text-transform: uppercase
+        margin-bottom: 15px
+
+    p
+        color: variables.$section-bg-color
+        max-width: 400px
+        margin-bottom: 15px
+
+    li
+        margin-bottom: 10px
+
+        a
+            color: variables.$section-bg-color
+            transition: .4s
+            &:hover
+                color: variables.$primary-color
+                
+            i
+                margin-right: 5px
+                color: variables.$primary-color
